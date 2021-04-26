@@ -134,6 +134,10 @@ function addBasket(product){
                value: colorDuLocalStorage[0].quantite + recupeQuantite,
                writable: false,
             })
+            Object.defineProperty(colorDuLocalStorage[0], 'totalPrice',{
+               value: colorDuLocalStorage[0].quantite * colorDuLocalStorage[0].price,
+               writable: false,
+            })
 
          }else{
             productLocalStorage.push(infoProduit)
